@@ -1,0 +1,159 @@
+{{ block title }}{{ endblock }}
+{{ block content }}
+<link rel="stylesheet" href="{{ static 'global/main.css' }}">
+
+<!---instructions in the middle-->
+<div style="text-align:center;margin-top:50px;">
+    Stolz
+<div id = "pboxL"><h3 style="font-weight:bold;"><br>
+
+</div>
+<div class="wordsbox">
+</div>
+
+
+<div id="pbox">
+    <div id="pbox1">
+    </div>
+    <div id="pbox1L">
+    </div>
+
+    <div id="pbox2">
+    </div>
+    <div id="pbox2L">
+
+    </div>
+    </div>
+
+<!--- navigation -->
+
+</div>
+<script src="{{ static 'global/pain.js' }}"/>
+<script src="{{ static 'global/99.js' }}"/>
+<script src="{{ static 'global/common.js' }}"/>
+<script src="{{ static 'global/fastclick.js' }}"/>
+<script src="{{ static 'global/jquery-1.6.1.min.js' }}"/>
+<script src="{{ static 'global/orig.js' }}"/>
+<script src="{{ static 'global/touch_handler.js' }}"/>
+<script>
+        var temp=document.getElementById("pbox");
+        temp.onselectstart = function() { this.style.cursor='crosshair'; return false; }
+</script>
+
+
+
+
+<input type="hidden" name="pyField12" id="pyField12" />
+
+<script>
+var xp=$("#pbox").offset().left;
+var yp=$("#pbox").offset().top;
+var arrX = new Array(0);
+var arrY = new Array(0);
+var arrTime = new Array(0);
+
+var arrXD = new Array(0);
+var arrYD = new Array(0);
+var arrTimeD = new Array(0);
+
+var arrMD = new Array(0);
+var arrMU = new Array(0);
+
+
+spraycan();
+$("#pbox").mousemove(function(e){
+
+                     var x= e.pageX - xp;
+                     var y = e.pageY - yp;
+                     var colid=Math.floor((x/10)%10);
+                     if(x<450)
+                     spraycan.currColour = 'ff0000';
+                     else
+                     spraycan.currColour = '0000ff';
+
+                     arrX.push(x);
+                     arrY.push(y);
+                     arrTime.push(e.timeStamp);
+
+                     // debug stuff
+
+                      var pageCoords = "( " + arrXD[arrXD.length-1] + ", " + x + " )";
+                      $("span:first").text("( xD, x ) - " + pageCoords);
+                      $("span:last").text("( e.timeStamp ) - " + e.timeStamp);
+                       }).mousedown(function(e){
+                          arrMD.push(e.timeStamp);
+
+                     }).mouseup(function(e){
+                       arrMU.push(e.timeStamp);
+
+                     });
+
+
+/* attach a submit handler to the form */
+$("#movenext").submit(function(event) {
+                      /* stop form from submitting normally */
+                      event.preventDefault();
+
+                      /* get some values from elements on the page: */
+                      var $form = $( this );
+                      url = $form.attr( 'action' );
+
+                      /* Send the data using post and put the results in a div */
+                      $.post( url, {'arrX': arrX, 'arrY': arrY, 'arrTime': arrTime,'arrXD': arrXD, 'arrYD': arrYD, 'arrTimeD': arrTimeD, 'arrMU': arrMU, 'arrMD': arrMD, 'file': outfile },
+                             function(data) {
+                             if(data==1)
+                             window.location = "session.php?auto=1&userID=<?php echo $userID; ?>";
+                             else
+                             window.location = "error.html";
+                             }
+                             );
+                      });
+
+
+
+
+
+
+</script>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+{{ formfield_errors 'pyField12' }}
+
+  <button class="otree-btn-next btn btn-primary" id="nextbutton">Next </button>
+<script>
+ var nextButton = document.getElementById("nextbutton");
+    nextButton.onclick = function() {
+    var dict = {};
+    dict["arrX"] = arrX;
+    dict["arrY"] = arrY;
+    dict["arrTime"] = arrTime
+    dict["arrXD"] = arrXD
+    dict["arrYD"] = arrYD
+    dict["arrTimeD"] = arrTimeD
+    dict["arrMU"] = arrMU
+    dict["arrMD"] = arrMD
+
+    document.getElementById('pyField12').value = JSON.stringify(dict);
+   }
+
+</script>
+{{ endblock }}
