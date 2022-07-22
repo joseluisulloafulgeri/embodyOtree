@@ -21,9 +21,9 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-This project is an oTree re-implementation of Enrico Glerean's [![embody survey software]][Enrico-url]
+
+This project is an oTree re-implementation of Enrico Glerean's [[embody survey software]][Enrico-url]
 
 Why?
 * Original Software uses csv files instead of a database.
@@ -38,9 +38,9 @@ Why?
 
 ### Built With
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
-* [[oTree][otree.readthedocs.io]][oTree-url]
+
+* [[oTree]][oTree-url]
 * [[Bootstrap]][Bootstrap-url]
 * [[JQuery]][JQuery-url]
 
