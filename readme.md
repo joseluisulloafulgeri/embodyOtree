@@ -51,7 +51,7 @@ Why?
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Following the Survey , use the convert.py to make the exported CSV from the oTree "Data" tab useable in Enrico Glerean's [![Matlab code]][Enrico-url2]
+Following the Survey , use the convert.py to make the exported CSV from the oTree "Data" tab useable in Enrico Glerean's [[Matlab code]][Enrico-url2]
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
