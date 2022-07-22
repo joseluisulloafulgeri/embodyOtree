@@ -61,7 +61,7 @@ Following the Survey , use the convert.py to make the exported CSV from the oTre
 ## Roadmap
 
 - [] Streamlining
-- [] R re-implementation of Matlab Code
+- [] R / Python re-implementation of Matlab Code
 
 
 
