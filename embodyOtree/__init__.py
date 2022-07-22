@@ -1,6 +1,7 @@
 from otree.api import *
 import random
 
+
 class C(BaseConstants):
     NAME_IN_URL = 'embody'
     PLAYERS_PER_GROUP = None
