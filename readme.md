@@ -69,9 +69,12 @@ Following the Survey , use the convert.py to make the exported CSV from the oTre
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
-
-
-
+<!-- CITE-->
+## Cite
+If you use it, please cite:
+Nummenmaa L., Glerean E., Hari R., Hietanen, J.K. (2014)
+Bodily maps of emotions, Proceedings of the National Academy of Sciences of United States of America doi:10.1073/pnas.1321664111 
+http://www.pnas.org/content/111/2/646.abstract
 
 <!-- LICENSE -->
 ## License
