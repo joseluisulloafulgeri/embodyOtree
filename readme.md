@@ -23,7 +23,7 @@
 
 
 
-This project is an oTree re-implementation of Enrico Glerean's [[embody survey software]][Enrico-url]
+This project is an oTree re-implementation of Enrico Glerean's [[embody survey software]][Enrico-url] (Enrico Glerean, Lauri Nummenmaa, Juulia Suvilehto)
 
 Why?
 * Original Software uses csv files instead of a database.
