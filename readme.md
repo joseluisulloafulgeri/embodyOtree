@@ -27,7 +27,7 @@ This project is an oTree re-implementation of Enrico Glerean's [[embody survey s
 
 Why?
 * Original Software uses csv files instead of a database.
-* Compataibility with Heroku.
+* Compataibility with Heroku. Thus easy hosting.
 * oTree makes it simple to modify and extend the survey
 
 
