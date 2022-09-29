@@ -30,6 +30,10 @@ Why?
 * Compataibility with Heroku. Thus easy hosting.
 * oTree makes it simple to modify and extend the survey
 
+Note
+* unlike the original code this Version does not contain any inquiry of demographic data
+* though, due to the otree framework, further questionaires are easy to add
+
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
