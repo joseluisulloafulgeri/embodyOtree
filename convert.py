@@ -58,6 +58,7 @@ subjects_path.mkdir(parents=True, exist_ok=True)
 for p in participantCode:
     id = random_with_N_digits(p,6) #random digits because thats what matlab wants
     temp = mydata.loc[mydata['participant.code'] == p]
+    temp = temp[~temp['player.rand_page_sequence'].isnull()]
     # Huge mess but it works
     presentation = temp.loc[:, temp.columns.str.endswith('player.rand_page_sequence')].copy()
     presentation.dropna(how='all', axis=1, inplace=True)
